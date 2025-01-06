@@ -1,0 +1,40 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+}
+
+.side-bar {
+    width: 60px;
+    background-color: #000000da; /* Couleur rose */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+    position: fixed;
+    height: 100vh;
+    transform: rotate(180deg);
+    justify-content: space-evenly; /* Ajouté pour espacer les éléments */
+    
+}
+
+.side-bar a {
+    writing-mode: vertical-rl; /* Modifié pour tourner les éléments dans l'autre sens */
+    text-orientation: mixed;
+    text-decoration: none;
+    color: rgb(255, 250, 250);
+    margin: 10px 0;
+    font-size: large;
+}
+
+.side-bar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.side-bar a:hover {
+    color: #d2ff69; /* Couleur de survol (rose vif) */
+}
+ .side-bar li{
+    margin: 50px 0;
+ }
