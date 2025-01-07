@@ -36,6 +36,14 @@
 .side-bar a:hover {
   color: #d2ff69; 
 }
+
 .side-bar li{
   margin: 50px 0;
+}
+
+.logo {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
 }
