@@ -47,3 +47,34 @@
   left: 50%;
   transform: translateX(-50%);
 }
+
+main {
+  margin-top: 150px; /* Espace pour ne pas chevaucher le header */
+  padding-left: 80px; /* Espace pour éviter la barre latérale */
+  width: 100%;
+}
+
+.tea-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 30px;
+  justify-items: center;
+  align-items: start;
+}
+
+.tea.picture {
+  text-align: center;
+}
+
+.tea.picture img {
+  max-width: 100% ;
+  height: auto;
+  border-radius: 10px; /* Pour un design plus moderne */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.description.picture {
+  margin-top: 10px;
+  font-size: 16px;
+  color: #333;
+}
