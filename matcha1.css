@@ -5,18 +5,24 @@
   font-family: sans-serif;
 }
 
+@font-face {
+  font-family: 'police-matcha';
+  src: url(Biko_Regular.otf) format('truetype');
+}
+
 .side-bar {
-  width: 60px;
+  width: 90px;
   background-color: hsla(0, 10%, 79%, 0.85); /* Utilisez HSLA pour la transparence */
   display: flex;
   flex-direction: column;
   align-items: center;
   padding-top: 20px;
   position: fixed;
-  height: 100vh;
+  top: 0; /* Faire démarrer la barre en haut de la page */
+  left: 0;
+  height: 105vh;
   transform: rotate(180deg);
   justify-content: space-evenly; /* Ajouté pour espacer les éléments */
-  
 }
 
 .side-bar a {
@@ -26,6 +32,7 @@
   color: #000;
   margin: 10px 0;
   font-size: large;
+  font-family: police-matcha;
 }
 
 .side-bar ul {
@@ -57,24 +64,49 @@ main {
 .tea-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 30px;
+  gap: 60px;
   justify-items: center;
   align-items: start;
 }
 
 .tea.picture {
+  display: flex; /* Active le mode flexbox */
+  flex-direction: column; 
+  justify-content: space-between; /* Espacement uniforme entre les éléments */
+  align-items: center; 
   text-align: center;
+  min-height: 350px; 
+  
 }
 
 .tea.picture img {
-  max-width: 100% ;
-  height: auto;
+  width: 200px;
+  height: 215px;
   border-radius: 10px; /* Pour un design plus moderne */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
 }
 
 .description.picture {
-  margin-top: 10px;
-  font-size: 16px;
+  margin-top: 20px;
+  font-size: 23px;
+  font-family: police-matcha;
   color: #333;
+}
+
+.color-button {
+  background-color: #4CAF50; 
+  color: white; 
+  border: none;
+  padding: 15px 30px; /* Espacement interne */
+  margin-top: auto;
+  font-size: 23px;
+  font-family: police-matcha;
+  border-radius: 20px; 
+  cursor: pointer; 
+  transition: background-color 0.5s ease; 
+}
+
+.color-button:hover {
+  background-color: #2b792f; 
 }
