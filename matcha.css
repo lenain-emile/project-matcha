@@ -1,6 +1,11 @@
+@font-face {
+    font-family: 'polic-matcha';
+    src: url(Biko_Regular.otf) format('truetype');
+}
+
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
+    font-family: polic-matcha;
     display: flex;
     flex-direction: column;
     min-height: 50vh;
@@ -76,13 +81,11 @@ main {
 }
 
 footer {
-    
     text-align: center;
     width: 100%;
     bottom: 0;
-    font-family: Arial, sans-serif;
-    
-
+    font-family: polic-matcha;
+    margin-top: 20px; /* Ajustez la valeur selon vos besoins */
 }
 
 footer ul {
@@ -111,7 +114,7 @@ footer ul li a {
 
 h1 {
     text-align: left;
-    font-family: Arial, sans-serif;
+    font-family: polic-matcha;
     text-decoration: none;
     margin-left: 8%;
     color: green;
@@ -119,7 +122,7 @@ h1 {
 }
  .accroche{
     color:#000;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: polic-matcha;
     white-space: prewrap;
     margin-left: 8%;
     margin-right: 22%;
@@ -131,7 +134,7 @@ h1 {
 }
 .accroche2{
     color:#000;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: polic-matcha;
     white-space: prewrap;
     margin-left: 22%;
     margin-right: 8%;
@@ -144,14 +147,14 @@ h1 {
 
 h2 {
     text-align: right;
-    font-family: Arial, sans-serif;
+    font-family: polic-matcha;
     text-decoration: none;
     margin-right: 8%;
     color: green;
 }
 h3 {
     text-align: left;
-    font-family: Arial, sans-serif;
+    font-family: polic-matcha;
     text-decoration: none;
     margin-left: 8%;
     color:green;
@@ -161,7 +164,7 @@ h3 {
 
 .accroche3{
     color:#000;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: polic-matcha;
     white-space: prewrap;
     margin-left: 8%;
     margin-right: 22%;
@@ -170,6 +173,7 @@ h3 {
     border-color:rgb(214, 191, 191);
     border-style: hidden double inset groove;
     border-radius: 10px;
+    margin-bottom: 20px; /* Ajustez la valeur selon vos besoins */
     
 }
 @keyframes titleAnimation { 
@@ -253,4 +257,26 @@ h3 {
         opacity: 0.9;
        
     }
+}
+@media (max-width: 768px) {
+    .icontitle {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    footer {
+        background-color: green;
+    .adresse {
+        display: none;
+    }
+    }
+}
+
+@media (max-width: 768px) {
+    .side-bar {
+        display: none;
+        
+    }
+
 }
