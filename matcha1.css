@@ -20,18 +20,18 @@
   position: fixed;
   top: 0; /* Faire démarrer la barre en haut de la page */
   left: 0;
-  height: 105vh;
+  height: 100vh;
   transform: rotate(180deg);
   justify-content: space-evenly; /* Ajouté pour espacer les éléments */
 }
 
 .side-bar a {
+  font-size: large;
   writing-mode: vertical-rl; /* Modifié pour tourner les éléments dans l'autre sens */
   text-orientation: mixed;
   text-decoration: none;
   color: #000;
   margin: 10px 0;
-  font-size: large;
   font-family: police-matcha;
 }
 
@@ -45,7 +45,7 @@
 }
 
 .side-bar li{
-  margin: 50px 0;
+  margin: 25px 0;
 }
 
 .logo {
@@ -193,5 +193,11 @@ main {
   .color-button {
     font-size: 16px;
     padding: 8px 15px;
+  }
+}
+
+@media scrn and (max-width: 430px) {
+  .side-bar{
+    height: 102vh;
   }
 }
