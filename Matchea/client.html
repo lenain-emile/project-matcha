@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Matcha Moments Client Portal - Manage your account and orders">
+    <title>Matcha | Compte Client</title>
+    <link rel="stylesheet" href="clientstyles.css">
+</head>
+<body>
+<div class="layout">
+
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <div class="logo" role="banner">
+            <img src="logo (1).jpg" class="logo" alt="logo">
+        </div>
+
+        <nav aria-label="Main navigation">
+            <div class="nav-group">
+                <h2 class="nav-label">Compte</h2>
+                <div class="nav-links">
+                    <a href="#profile">Profile</a>
+                    <a href="#orders">Commande</a>
+                    <a href="#tracking">Suivi de commande</a>
+                </div>
+            </div>
+            
+            <div class="nav-group">
+                <button onclick="history.back()">Retour vers la boutique</button>
+
+                <h2 class="nav-label"></h2>
+                <div class="nav-links">
+                    <a href="#new-collection"></a>
+                    <a href="#tea-sets"></a>
+                    <a href="#accessories"></a>
+                </div>
+            </div>
+        </nav>
+    </aside> 
+
+    <!-- Main Container for All Sections -->
+    <div class="main-container">
+        <!-- Profile Section -->
+        <section class="main-content" id="profile">
+            <header class="page-header">
+                <h1>Information Personnel</h1>
+            </header>
+
+            <div class="stats-grid" aria-label="Account Statistics">
+                <div class="stat-card">
+                    <div class="stat-value">734</div>
+                    <div class="stat-label">Points fidélité
+
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value">8</div>
+                    <div class="stat-label">Commande</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value">Premium</div>
+                    <div class="stat-label">Statue Membre</div>
+                </div>
+            </div>
+
+            <form class="form-grid" action="/update-profile" method="POST">
+                <div class="form-group">
+                    <label for="firstName">Nom</label>
+                    <input type="text" id="firstName" name="firstName" value="Jean" required>
+                </div>
+                <div class="form-group">
+                    <label for="lastName">Prénom</label>
+                    <input type="text" id="lastName" name="lastName" value="Dupont" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" value="jean.dupont@gmail.com" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Téléphone</label>
+                    <input type="tel" id="phone" name="phone" value="06 12 34 56 78" pattern="[0-9\s]{10,14}">
+                </div>
+                <div class="form-group full">
+                    <label for="address">Addresse</label>
+                    <input type="text" id="address" name="address" value="123 rue de Paris" required>
+                </div>
+                <div class="form-group">
+                    <label for="postalCode">Code Postale</label>
+                    <input type="text" id="postalCode" name="postalCode" value="75001" pattern="[0-9]{5}" required>
+                </div>
+                <div class="form-group">
+                    <label for="city">Ville</label>
+                    <input type="text" id="city" name="city" value="Paris" required>
+                </div>
+                <div class="form-group full">
+                    <button type="submit"> <Em></Em>nregistrer les modifications
+
+                    </button>
+                </div>
+            </form>
+        </section>
+
+        <!-- Orders Section -->
+        <section class="main-content" id="orders">
+            <header class="page-header">
+                <h1>Mes Commandes</h1>
+                <p class="subtitle">Suivre et gérer vos commandes
+                </p>
+            </header>
+
+            <div class="order-list">
+                <article class="order-item">
+                    <table class="orders-table">
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <div class="product-preview">
+                                        <img class="product-image" src="early-03.webp" alt="Ceremonial Grade Matcha tin" width="50" height="50">
+                                        <div class="product-info">
+                                            <div class="product-name">Ceremonial Grade Matcha</div>
+                                            <div class="product-details">30g tin • Premium Selection</div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>89,99 €</td>
+                                <td><span class="status status-delivered">Livraison</span></td>
+                                <td><button type="button" aria-label="View order details">Detail</button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </article>
+            </div>
+        </section>
+
+        <!-- Order Tracking Section -->
+        <section class="main-content" id="tracking">
+            <header class="page-header">
+                <h1>Suivi de Commande</h1>
+                <p class="subtitle">Suivez l'état de vos commandes en temps réel</p>
+            </header>
+
+            <div class="tracking-search">
+                <form action="/track-order" method="GET" class="tracking-form">
+                    <div class="form-group">
+                        <label for="orderNumber">Numéro de Commande</label>
+                        <input type="text" id="orderNumber" name="orderNumber" placeholder="ex: ORD-2024-123456" required>
+                        <button type="submit">Rechercher</button>
+                    </div>
+                </form>
+            </div>
+
+            <div class="tracking-details">
+                <div class="tracking-timeline">
+                    <div class="timeline-item completed">
+                        <div class="timeline-icon">✓</div>
+                        <div class="timeline-content">
+                            <h3>Commande Confirmée</h3>
+                            <p>8 janvier 2024 - 14:30</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item completed">
+                        <div class="timeline-icon">✓</div>
+                        <div class="timeline-content">
+                            <h3>En Préparation</h3>
+                            <p>8 janvier 2024 - 15:45</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item active">
+                        <div class="timeline-icon">●</div>
+                        <div class="timeline-content">
+                            <h3>En Transit</h3>
+                            <p>9 janvier 2024 - 09:15</p>
+                            <p class="tracking-update">Votre colis est en cours d'acheminement vers Paris</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-icon">○</div>
+                        <div class="timeline-content">
+                            <h3>Livraison</h3>
+                            <p>Estimation: 10 janvier 2024</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="delivery-info">
+                    <h3>Informations de Livraison</h3>
+                    <div class="delivery-details">
+                        <p><strong>Adresse:</strong> 123 rue de Paris, 75001 Paris</p>
+                        <p><strong>Mode de livraison:</strong> Chronopost</p>
+                        <p><strong>Numéro de suivi:</strong> CP123456789FR</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>
+</body>
+</html>
