@@ -1,0 +1,196 @@
+@font-face {
+  font-family: 'police-matcha';
+  src: url(Biko_Regular.otf) format('truetype');
+}
+
+.side-bar {
+  width: 90px;
+  background-color:green ;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 10px;
+  position: fixed;
+  height: 100vh;
+  transform: rotate(180deg);
+  justify-content: space-evenly; /* Add to space element */
+  
+}
+
+.side-bar a {
+  writing-mode: vertical-rl; /* to turn element */
+  text-orientation: mixed;
+  text-decoration: none;
+  color: black; 
+  margin: 10px 0;
+  margin: 10px 0;
+  font-size: large;
+}
+
+.side-bar ul {
+  list-style-type: none;
+  padding: 0;
+  
+}
+
+.side-bar a:hover {
+  color: white;
+}
+.side-bar li{
+  margin: 15px 0;
+}
+.logo {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.aboutdes {
+padding-top: 190px;
+margin-left: 400px;
+max-width: 700px;
+font-size: 23px;
+font-family: police-matcha;
+line-height: 1.7;
+}
+
+.aboutdes h1{
+  color: green;
+}
+
+.profilequipe h3{
+  padding-top: 90px;
+  margin-left: 400px;
+  font-size: 35px;
+  font-family: police-matcha;
+}
+
+.profilequipe img{
+  padding-top: 100px;
+  flex-direction: row;
+  justify-content: baseline;
+  margin-left: 120px;
+  border-radius: 200px;
+  height: 170px;
+  
+}
+
+.aboutengagement h2{
+  color: green;
+  padding-top: 45px;
+  font-size: 35px;
+  font-family: police-matcha;
+}
+
+.aboutengagement{
+padding-top: 20px;
+margin-left: 400px;
+max-width: 700px;
+font-size: 23px;
+font-family: police-matcha;
+line-height: 1.7;
+}
+
+footer {
+  text-align: center;
+  width: 100%;
+  font-family: polic-matcha;
+  margin-top: 20px;
+  position:static;
+  bottom: 0;
+  background-color: green; 
+  padding: 10px 0;
+}
+
+footer ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+footer ul li {
+  display:flex;
+  justify-content: flex-end;
+}
+
+
+footer ul li a {
+  text-decoration: none;
+  color: #000;
+  
+  
+}
+
+footer a:hover {
+  color: white;
+}
+@media screen and (max-width: 768px) {
+
+  .logo {
+      width: 70px;
+      height: auto;
+      top: 10px;
+  }
+  .aboutdes, .aboutengagement, .profilequipe {
+      margin-left: 120px; 
+      font-size: 18px; 
+  }
+
+  .aboutdes h1, .aboutengagement h2, .profilequipe h3 {
+      font-size: 25px; 
+  }
+
+  /* Images de l'équipe */
+  .profilequipe img {
+      height: 140px;
+      margin-left: 80px;
+  }
+
+  /* Barre de navigation */
+  .side-bar {
+      width: 70px;
+  }
+
+  .side-bar a {
+      font-size: medium;
+  }
+}
+@media screen and (max-width: 480px) {
+  .logo {
+      width: 50px;
+      height: auto;
+      top: 5px;
+  }
+
+  .aboutdes, .aboutengagement, .profilequipe {
+      margin-left: 100px; 
+      font-size: 16px;
+      padding-top: 20px;
+  }
+
+  .aboutdes h1, .aboutengagement h2, .profilequipe h3 {
+      font-size: 20px;
+  }
+  .profilequipe img {
+      height: 100px;
+      margin-left: 50px;
+  }
+  .side-bar {
+      width: 50px;
+  }
+
+  .side-bar a {
+      font-size: small;
+  }
+
+  footer {
+      font-size: 14px;
+  }
+  .profilequipe img{
+    height: 40px;
+    margin-left: 5px;
+    max-width: none;
+  }
+}
+
