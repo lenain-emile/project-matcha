@@ -76,16 +76,19 @@ main {
     border-radius: 10%;
     margin-left: 18px;
     border-style: groove inset;
-    animation: bounce 5s ease-in-out;
+    animation: bounce 4s infinite;
     margin-left: 1%;
 }
 
 footer {
     text-align: center;
     width: 100%;
-    bottom: 0;
     font-family: polic-matcha;
-    margin-top: 20px; /* Ajustez la valeur selon vos besoins */
+    margin-top: 20px;
+    position:static;
+    bottom: 0;
+    background-color: green; 
+    padding: 10px 0;
 }
 
 footer ul {
@@ -93,10 +96,13 @@ footer ul {
     padding: 0;
     margin: 0;
     
+    
+    
 }
 
 footer ul li {
-    display: inline-block;
+    display:flex;
+    justify-content: flex-end;
     margin-right: 15px;
 }
 
@@ -106,6 +112,10 @@ footer ul li a {
     color: #000;
     
     
+}
+
+footer a:hover {
+    color: white;
 }
 
 .icontitle {
@@ -123,7 +133,6 @@ h1 {
  .accroche{
     color:#000;
     font-family: polic-matcha;
-    white-space: prewrap;
     margin-left: 8%;
     margin-right: 22%;
     line-height: 2;
@@ -135,7 +144,6 @@ h1 {
 .accroche2{
     color:#000;
     font-family: polic-matcha;
-    white-space: prewrap;
     margin-left: 22%;
     margin-right: 8%;
     line-height: 2;
@@ -165,7 +173,6 @@ h3 {
 .accroche3{
     color:#000;
     font-family: polic-matcha;
-    white-space: prewrap;
     margin-left: 8%;
     margin-right: 22%;
     margin-top: 3%;
@@ -173,7 +180,7 @@ h3 {
     border-color:rgb(214, 191, 191);
     border-style: hidden double inset groove;
     border-radius: 10px;
-    margin-bottom: 20px; /* Ajustez la valeur selon vos besoins */
+    margin-bottom: 100px; 
     
 }
 @keyframes titleAnimation { 
@@ -192,7 +199,7 @@ h3 {
 }
 
 .title{
-    animation: titleAnimation 5s ease-in-out;
+    animation: titleAnimation 10s ease-in-out;
 }
 
 @keyframes bounce { /* bounce animation for the main pictures */
@@ -279,4 +286,13 @@ h3 {
         
     }
 
+}
+.profilpic {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 10px 20px;
+    color: white;
+    border: none;
+    border-radius: 5px;
 }
