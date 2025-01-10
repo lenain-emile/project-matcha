@@ -52,10 +52,10 @@ margin-left: 400px;
 max-width: 700px;
 font-size: 23px;
 font-family: police-matcha;
-line-height: 1.5;
+line-height: 1.7;
 }
 
-.profilequipe h2{
+.profilequipe h3{
   padding-top: 90px;
   margin-left: 400px;
   font-size: 35px;
@@ -70,5 +70,20 @@ line-height: 1.5;
   border-radius: 200px;
   height: 170px;
   
+}
+
+.aboutengagement h2{
+  padding-top: 45px;
+  font-size: 35px;
+  font-family: police-matcha;
+}
+
+.aboutengagement{
+padding-top: 20px;
+margin-left: 400px;
+max-width: 700px;
+font-size: 23px;
+font-family: police-matcha;
+line-height: 1.7;
 }
 
