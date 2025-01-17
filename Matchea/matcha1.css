@@ -70,7 +70,7 @@ main {
 }
 
 .tea.picture {
-  display: flex; /* Active le mode flexbox */
+  display: flex; 
   flex-direction: column; 
   justify-content: space-between; /* Espacement uniforme entre les éléments */
   align-items: center; 
